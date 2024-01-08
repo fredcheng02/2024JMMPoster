@@ -3,7 +3,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[OT1]{fontenc}
 \usepackage{amsmath}
-\usepackage{amsfonts}
 \usepackage[bb=esstix]{mathalfa}
 \usepackage{amsthm}
 \usepackage{amssymb}
@@ -291,11 +290,11 @@
         \sup_{\lambda \geq 0} f^{d,p}(\lambda)<1. \label{eq:goal}
     \end{equation} Hence if we find a probability $p$ that satisfies the above, then $p\geq p_d$.
 
-    How to find the distribution of $U$? In \cite{bailey2023critical} the authors were able to compute its distribution by hand for $d = 2, 3, 4$. In our research we found an inductive way to compute the distribution of $U(d,p,\lambda)$ for higher $d$'s (summarized using Figure 4).
+    What is the distribution of $U$? In \cite{bailey2023critical} the authors were able to compute its distribution by hand for $d = 2, 3, 4$. In our research we found an inductive way to compute the distribution of $U(d,p,\lambda)$ for higher $d$'s (summarized using Figure 4).
     
     \begin{tikzfigure}[change of variables when $d = 4$ and $p = 0.27$]
         \includegraphics[valign=m,width=0.25\colwidth]{f_lambda.png}
-        $\implies$
+        $\Rightarrow$
         \includegraphics[valign=m,width=0.25\colwidth]{g_y.png}
     \end{tikzfigure}
     Under a simple change of variables (see Figure 5), our $f(\lambda)$ becomes a polynomial $g(y)$ on $(0,1]$. This reduces our question to finding the unique maximum of the polynomial $g(y)$ and showing that it is less than $1$, which is not hard to implement by computers. We get rigorous bounds on $p_m$ for $2\leq m \leq 13$.
